@@ -3,7 +3,9 @@ from pathlib import Path
 import torch
 import lightning.pytorch as pl
 from torch.utils.data import DataLoader
-from torchvision import transforms, datasets
+
+# HuggingFace Datasets
+from datasets import load_dataset
 
 
 class ImageDataModule(pl.LightningDataModule):
@@ -16,3 +18,4 @@ class ImageDataModule(pl.LightningDataModule):
 	  ):
 	    super().__init__()
 	    self.data_dir = Path(data_dir)
+	    self.dataset = load_dataset(data_dir)

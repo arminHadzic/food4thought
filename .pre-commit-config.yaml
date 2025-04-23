@@ -3,8 +3,8 @@ repos:
     hooks:
       - id: yapf
         name: Format Python via yapf
-        entry: yapf --in-place --recursive --style="{indent_width: 2}" src/*.py
+        entry: yapf --in-place --recursive --style="{indent_width: 2}"
         language: python
         types: [python]
-        pass_filenames: false
+        pass_filenames: true
         always_run: true
