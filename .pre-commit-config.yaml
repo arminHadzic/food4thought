@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: yapf
+        name: Format Python via yapf
+        entry: yapf --in-place --recursive --style="{indent_width: 2}" src/*.py
+        language: python
+        types: [python]
+        pass_filenames: false
+        always_run: true
